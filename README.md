@@ -19,7 +19,7 @@ A smart, web-based app that makes event registration and entry seamless using QR
 ## 📦 Setup Instructions
 
 1. Clone the repo  
-   `git clone https://github.com/your-username/eventease-checkin.git`
+   `git clone https://github.com/Sana-17-Cipher/eventease-checkin.git`
 
 2. Install dependencies  
    `npm install`
@@ -33,7 +33,7 @@ A smart, web-based app that makes event registration and entry seamless using QR
 
 ## 📸 Screenshots (Add after development)
 
-> _(You can insert screenshots of your app here after you're done building it)_
+>
 
 ## ✨ Author
-Sankari Pillai – []
+Sankari Pillai 
