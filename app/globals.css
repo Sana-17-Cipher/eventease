@@ -1,29 +1,73 @@
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
-
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Updated color palette to match EventEase design brief */
+  --background: 255 255 255; /* #ffffff - Main background */
+  --foreground: 71 85 105; /* #475569 - Main text */
+  --card: 236 254 255; /* #ecfeff - Card background */
+  --card-foreground: 71 85 105; /* #475569 - Card text */
+  --popover: 255 255 255; /* Light popover background */
+  --popover-foreground: 71 85 105; /* #475569 - Popover text */
+  --primary: 22 78 99; /* #164e63 - Main primary color */
+  --primary-foreground: 255 255 255; /* #ffffff - Primary text color */
+  --secondary: 245 158 11; /* #f59e0b - Accent color */
+  --secondary-foreground: 255 255 255; /* #ffffff - Accent text */
+  --muted: 236 254 255; /* #ecfeff - Muted background */
+  --muted-foreground: 71 85 105; /* #475569 - Muted text */
+  --accent: 245 158 11; /* #f59e0b - Accent */
+  --accent-foreground: 255 255 255; /* #ffffff - Accent text */
+  --destructive: 220 38 38; /* #dc2626 - Destructive actions */
+  --destructive-foreground: 255 255 255; /* #ffffff - Destructive text */
+  --border: 226 232 240; /* #e2e8f0 - Light border */
+  --input: 255 255 255; /* #ffffff - Input fields */
+  --ring: 22 78 99; /* Primary ring color */
+  --radius: 0.5rem; /* Card corner rounding */
+  
+  --primary: #164e63;      /* Your teal primary */
+  --secondary: #f59e0b;    /* Your amber accent */
+  --background: #ffffff;   /* White background */
+  --foreground: #475569;   /* Slate text */
+  --card: #ecfeff;         /* Light cyan cards */
+  --border: #e2e8f0;       /* Light borders */
+  /* Apply your brand colors */
+.bg-primary { background-color: var(--primary); }
+.text-primary { color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.text-secondary { color: var(--secondary); }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+
+.dark {
+  --background: 9 9 11;
+  --foreground: 250 250 250;
+  --card: 9 9 11;
+  --card-foreground: 250 250 250;
+  --popover: 9 9 11;
+  --popover-foreground: 250 250 250;
+  --primary: 250 250 250;
+  --primary-foreground: 24 24 27;
+  --secondary: 39 39 42;
+  --secondary-foreground: 250 250 250;
+  --muted: 39 39 42;
+  --muted-foreground: 161 161 170;
+  --accent: 39 39 42;
+  --accent-foreground: 250 250 250;
+  --destructive: 239 68 68;
+  --destructive-foreground: 250 250 250;
+  --border: 39 39 42;
+  --input: 39 39 42;
+  --ring: 142 142 142;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-gray-200;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-white text-gray-700;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
